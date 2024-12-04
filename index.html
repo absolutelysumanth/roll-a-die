@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll a Die</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .die {
+      font-size: 200px;
+      margin: 20px 0;
+      color: #0078d4;
+      display: inline-block;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #005fa1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Roll a Die</h1>
+  <div class="die" id="die">🎲</div><br>
+  <button onclick="rollDie()">Roll the Die</button>
+
+  <script>
+    function rollDie() {
+      const dieFaces = ['🎲', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+      const result = Math.floor(Math.random() * 6) + 1;
+      document.getElementById('die').innerHTML = dieFaces[result];
+    }
+  </script>
+</body>
+</html>
